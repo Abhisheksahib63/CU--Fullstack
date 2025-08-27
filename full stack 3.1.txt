@@ -1,0 +1,49 @@
+Experiment: Person Class Hierarchy with Student and Teacher Subclasses
+AIM
+Understand and apply the concept of inheritance in JavaScript by creating a base Person class and extending it into Student and Teacher subclasses.
+CODE
+// Base Person class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  displayInfo() {
+    console.log(Name: ${this.name}, Age: ${this.age});
+  }
+}
+
+// Student subclass extending Person
+class Student extends Person {
+  constructor(name, age, course) {
+    super(name, age);
+    this.course = course;
+  }
+  displayInfo() {
+    console.log(Student Name: ${this.name}, Age: ${this.age}, Course: ${this.course});
+  }
+}
+
+// Teacher subclass extending Person
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+  displayInfo() {
+    console.log(Teacher Name: ${this.name}, Age: ${this.age}, Subject: ${this.subject});
+  }
+}
+
+// Creating instances
+const student1 = new Student('Alice', 20, 'Computer Science');
+const teacher1 = new Teacher('Mr. Smith', 40, 'Mathematics');
+
+// Calling methods
+student1.displayInfo();
+teacher1.displayInfo();
+OUTPUT
+Expected Console Output:
+Student Name: Alice, Age: 20, Course: Computer Science
+Teacher Name: Mr. Smith, Age: 40, Subject: Mathematics
+    make a pdf out of it
